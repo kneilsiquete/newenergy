@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="description"
+        content="Use iSelect to compare a range of energy rates on electricity and gas from Australian suppliers and you could save on your next energy bill" />
+    <meta name="keywords" content="gas,electricity,energy,energy plans comparison,australia" />
+    <meta name="author" content="iSelect" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link href="vendor/tooglebootstrap/bootstrap-toggle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/modern-business.css" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">YOUSELECT</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">
+            iSelect Energy Compare
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Compare</li>
+        </ol>
+
+        <div id="filters" class="row clearfix">
+            <div class="col-lg-12 mb-12">
+                <div class="card h-200">
+                    <h3 class="card-header">Refine Recommendations</h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="checkbox">
+                                    <label class="checkbox-inline">
+                                        Do you have rooftop solar panels?
+                                    </label>
+                                    <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
+                                        data-onstyle="primary" data-offstyle="secondary" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="checkbox">
+                                    <label class="checkbox-inline">
+                                        Upload your e-bill for an accurate comparison in seconds.?
+                                    </label>
+                                    <input id="upload-toggle" type="checkbox" data-toggle="toggle" data-on="Yes"
+                                        data-off="No" data-onstyle="primary" data-offstyle="secondary" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <!-- Upload bill -->
+                        <div class="row d-none" id="upload-row">
+                            <div class="col-lg-6">
+                                <div class="custom-file overflow-hidden rounded-pill mb-5">
+                                    <input id="customFile" type="file" class="custom-file-input rounded-pill" />
+                                    <label for="customFile" class="custom-file-label rounded-pill">Choose bill
+                                        file</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Usage Type -->
+                        <div class="row" id="usage-type">
+                            <div class="col-lg-12">
+                                Usage type:
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="options" id="option1" checked />
+                                        Low
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" id="option2" /> Medium
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" id="option3" /> High
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body-->
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <!-- Pricing Row -->
+        <div id="pricing" class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h3 class="card-header">
+                        Rate Saver
+                        <img src="images/small/powerdirect_82x52.png" class="float-right" />
+                    </h3>
+                    <div class="card-body">
+                        <div class="display-4">$492.99</div>
+                        <div class="font-italic">per 91 days</div>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#myModal">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>No difference</strong> to the Victorian Default Offer (VDO)</li>
+                        <li class="list-group-item">
+                            12% less than the Victorian Default Offer (VDO) when you pay on time. This offer is based on a
+                            residential customer who
+                            consumes 4000 KWh a year on a Single tariff in the CitiPower network. The lowest annual price is $ 1249.
+                            Your bill will
+                            differ, based on your actual usage.
+                        </li>
+                        <li class="list-group-item">
+                            A great low rate on your usage and supply charges
+                        </li>
+                        <li class="list-group-item">Solar compatible</li>
+                        <li class="list-group-item">Single Rate</li>
+                        <li class="list-group-item">No exit fees</li>
+                        <li class="list-group-item">
+                            <a href="Thirdpage.html" class="btn btn-primary apply-btn">Apply Now!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card card-outline-primary h-100">
+                    <h3 class="card-header bg-iselect text-white">
+                        Origin
+                        <img src="images/small/Origin1_85x52.png" class="float-right" />
+                    </h3>
+                    <div class="card-body">
+                        <div class="display-4">$443.99</div>
+                        <div class="font-italic">per 91 days</div>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#myModal">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>20% less</strong> than the Victorian Default Offer (VDO)</li>
+                        <li class="list-group-item">
+                            This offer is based on a residential customer who consumes 4000 KWh a year on a Single Rate tariff in
+                            the CitiPower
+                            network. The lowest annual price is $ 1278. Your bill will differ, based on your actual usage.
+                        </li>
+                        <li class="list-group-item">
+                            A great low rate on your usage and supply charges
+                        </li>
+                        <li class="list-group-item">Solar compatible</li>
+                        <li class="list-group-item">Single Rate</li>
+                        <li class="list-group-item">No exit fees</li>
+                        <li class="list-group-item">
+                            <a href="Thirdpage.html" class="btn btn-primary apply-btn">Apply Now!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h3 class="card-header">
+                        AGL <img src="images/small/agl_82x52.png" class="float-right" />
+                    </h3>
+                    <div class="card-body">
+                        <div class="display-4">$434.99</div>
+                        <div class="font-italic">per 91 days</div>
+                        <div class="mt-3">
+                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#myModal">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>10% less</strong> than the Victorian Default Offer (VDO)
+                        </li>
+                        <li class="list-group-item">
+                            This offer is based on a residential customer who consumes 4000 KWh a year on a Single Rate tariff in
+                            the CitiPower
+                            network. The lowest annual price is $ 1278. Your bill will differ, based on your actual usage.
+                        </li>
+                        <li class="list-group-item">A great low rate on your usage and supply charges</li>
+                        <li class="list-group-item">Solar Compatible</li>
+                        <li class="list-group-item">Single Rate</li>
+                        <li class="list-group-item">No exit fees</li>
+                        <li class="list-group-item">
+                            <a href="Thirdpage.html" class="btn btn-primary apply-btn">Apply
+                                Now!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">
+                Copyright &copy; YOUSELECT 2020
+            </p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <div class="details">
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="form-group">
+                                <button type="button" class="btn applyBtn">Apply Now</button>
+                            </div>
+                            <div class="form-group features">
+                                <h3>Features</h3>
+
+                                <h4>
+                                    No confusing discounts. Just simple, transparent pricing.
+                                </h4>
+                                <div>
+                                    Momentum Energy has ditched discounting in favour of
+                                    delivering simple rates you can easily understand. With zero
+                                    cheeky conditions and zero catches, it’s fair, transparent
+                                    and simple.
+                                </div>
+
+                                <h4>Australian-based call centres.</h4>
+                                <div>
+                                    Not only is Momentum 100% Australian owned and operated,
+                                    their call centres are in Melbourne and Hobart. So if you
+                                    ever need help, you don’t have to call overseas to get it.
+                                </div>
+
+                                <h4>Support renewable energy.</h4>
+                                <div>
+                                    Momentum Energy is 100% owned by Hydro Tasmania –
+                                    Australia’s largest renewable energy generator. Choose
+                                    Momentum and you support clean Aussie renewables. Feels
+                                    good, eh?
+                                </div>
+
+                                <h4>Get great customer service.</h4>
+                                <div>
+                                    It’s not just Momentum saying this. In 2019, Canstar Blue
+                                    gave them a 5-star rating for customer service in several
+                                    categories and Mozo awarded them for Excellent Customer
+                                    Service – all based on feedback from customers themselves.
+                                </div>
+
+                                <h4>Flexible payment options.</h4>
+                                <div>
+                                    Choose a payment option that works for you. Momentum also
+                                    offers monthly billing for electricity – a great way to stay
+                                    in control of your budget. Just ask.
+                                </div>
+
+                                <h4>Online account management.</h4>
+                                <div>Pay your bills and update your details online.</div>
+                            </div>
+                            <div class="form-group why_provider">
+                                <h3>Why Momentum?</h3>
+                                <div>
+                                    <i class="fas fa-check"></i> No confusing discounts.
+                                </div>
+                                <div><i class="fas fa-check"></i> Just great rates.</div>
+                                <div>
+                                    <i class="fas fa-check"></i> 100% Australian ownedAward
+                                    Winning Customer Service
+                                </div>
+                            </div>
+                            <br />
+                            <!-- Nav pills -->
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#home">Electricity details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#menu1">Gas details</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane container active" id="home">
+                                    <br />
+                                    <h3>Plan details</h3>
+                                    <h4>Discounts and fees</h4>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col">
+                                            Discounts and Bonuses
+                                        </div>
+                                        <div class="col">
+                                            A great low rate on your usage & supply charges
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Contract Exit Fee
+                                        </div>
+                                        <div class="col">
+                                            No exit fee
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Dishonoured Payment Fee
+                                        </div>
+                                        <div class="col">
+                                            Cheque ($6.50 GST Not Applicable), Direct Debit ($2.30
+                                            GST Not Applicable)
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Card Payment Fee
+                                        </div>
+                                        <div class="col">
+                                            0.45% Payment Processing Fee
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <h4>Other details</h4>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col">
+                                            Green options
+                                        </div>
+                                        <div class="col">
+                                            Get 10% of your electricity usage from GreenPower
+                                            accredited renewable energy sources for an extra $1.10
+                                            per week inc GST
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Billing Options
+                                        </div>
+                                        <div class="col">
+                                            Monthly, bi-monthly or quarterly, you have more control
+                                            over when and how you receive your energy bills. By
+                                            choosing My AGL Monthly Bill, you can receive your
+                                            electricity and/or gas bills each month on a day that
+                                            you choose.
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Payment Options
+                                        </div>
+                                        <div class="col">
+                                            AGL My Account online, AGL Energy App, Credit Card-
+                                            Visa, MasterCard, BPAY, Pay by Phone, Direct Debit, Cash
+                                            (Australia Post - $2.20 inc GST), Centerpay, Post
+                                            Billpay, PayPal.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <h3>Rates details</h3>
+                                    <p>
+                                        The price you pay for energy services includes tariff and
+                                        other feeds and charges. The rates applicable to your
+                                        address is dependent on your distribution area and meter
+                                        type, which you should be able to find on your energy
+                                        bills. The meter number (10 to 11 digits usually found on
+                                        back of the bill) is used to identify the type of meter.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col">
+                                            Network area
+                                        </div>
+                                        <div class="col">
+                                            EVTCTTRE
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Effective from
+                                        </div>
+                                        <div class="col">
+                                            Updated Connection Fee - 01/01/2020
+                                        </div>
+                                    </div>
+                                    <div class="row head">
+                                        <div class="col"></div>
+                                        <div class="col">
+                                            Price (Incl GST)
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Daily supply charge
+                                        </div>
+                                        <div class="col">
+                                            81.73 cents per day
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Peak usage of first 1644.0 MJ bimonthly
+                                        </div>
+                                        <div class="col">
+                                            2.1857 cents per MJ
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Peak usage of next 1314.0 MJ bimonthly
+                                        </div>
+                                        <div class="col">
+                                            2.1384 cents per MJ
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Remaining peak usage
+                                        </div>
+                                        <div class="col">
+                                            1.4498 cents per MJ
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <p>
+                                        Any pricing we display is indicative based on the rates
+                                        our providers have given us and information provided by
+                                        you. Any energy plan and network presented will be based
+                                        on the postcode you have provided and you will be advised
+                                        by the retailer if your rates subsequently differ due to a
+                                        different meter type or network.
+                                    </p>
+                                    <br />
+                                </div>
+                                <div class="tab-pane container fade" id="menu1">
+                                    <br />
+                                    <h3>Plan details</h3>
+                                    <h4>Discounts and fees</h4>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col">
+                                            Discounts and Bonuses
+                                        </div>
+                                        <div class="col">
+                                            0
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Contract Exit Fee
+                                        </div>
+                                        <div class="col">
+                                            No exit fee
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Dishonoured Payment Fee
+                                        </div>
+                                        <div class="col">
+                                            0
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Card Payment Fee
+                                        </div>
+                                        <div class="col">
+                                            No Credit Card Fees.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <h4>Other details</h4>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col">
+                                            Billing Options
+                                        </div>
+                                        <div class="col">
+                                            Quarterly (or monthly for smart meters).
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Payment Options
+                                        </div>
+                                        <div class="col">
+                                            Direct Debit (Bank Account, VISA and MasterCard only),
+                                            BPay, Credit Card (Visa/MasterCard/American Express),
+                                            Online, Cash (Aust Post), Cheque, Post Bill Pay.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <h3>Rates details</h3>
+                                    <p>
+                                        The price you pay for energy services includes tariff and
+                                        other feeds and charges. The rates applicable to your
+                                        address is dependent on your distribution area and meter
+                                        type, which you should be able to find on your energy
+                                        bills. The meter number (10 to 11 digits usually found on
+                                        back of the bill) is used to identify the type of meter.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col">
+                                            Network area
+                                        </div>
+                                        <div class="col">
+                                            EVTCTTRE
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Effective from
+                                        </div>
+                                        <div class="col">
+                                            Updated Connection Fee - 01/01/2020
+                                        </div>
+                                    </div>
+                                    <div class="row head">
+                                        <div class="col"></div>
+                                        <div class="col">
+                                            Price (Incl GST)
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Daily supply charge
+                                        </div>
+                                        <div class="col">
+                                            81.73 cents per day
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Peak usage of first 1644.0 MJ bimonthly
+                                        </div>
+                                        <div class="col">
+                                            2.1857 cents per MJ
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Peak usage of next 1314.0 MJ bimonthly
+                                        </div>
+                                        <div class="col">
+                                            2.1384 cents per MJ
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Remaining peak usage
+                                        </div>
+                                        <div class="col">
+                                            1.4498 cents per MJ
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <p>
+                                        The prices shown are indicative prices based on the rates
+                                        our participating providers have given us, your postcode
+                                        and information provided by you.
+                                    </p>
+                                    <br />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="button" class="btn applyBtn">Apply Now</button>
+                                <div class="phone-us-ctc">
+                                    <i class="fas fa-phone-volume fa-2x "></i><span>1800 1 542 1232</span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group dtls_term">
+                                <h2>
+                                    Terms and conditions -
+                                    <button type="button" class="btn btn-link">
+                                        click here
+                                    </button>
+                                </h2>
+                                <p>
+                                    Get Basic Plan Information Documents and Energy Fact Sheets
+                                    at www.momentum.com.au/plan-info, or on request from
+                                    Momentum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/tooglebootstrap/bootstrap-toggle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#upload-toggle").change(function () {
+                $("#upload-row").toggleClass("d-none");
+            });
+
+            $("#customFile").change(function () {
+                $("#usage-type #option3")
+                    .parent()
+                    .addClass("active");
+                $("#usage-type #option1")
+                    .parent()
+                    .removeClass("active");
+
+                $("#pricing").html(
+                    '<img class="center-img" width="200" height="200" src="images/loading.gif" style="margin:20px auto !important;" />'
+                );
+
+                // Change recommendations after 1 sec
+                setTimeout(function () {
+                    $("#pricing").load("reco/reco-2.html");
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>
