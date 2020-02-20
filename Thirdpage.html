@@ -55,6 +55,23 @@
             </div>
         </div>
     </div>
+    <div class="row" style="margin-top:2%;">
+        <div class="col-lg">
+            <div class="card h-200">
+                <h4 class="card-header">Upload your current bill (Optional)</h4>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">  
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" placeholder="yeah1" id="customFile1">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg">
             <div class="card h-200">
@@ -62,7 +79,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-primary">Call to Apply</button>
+                            <button type="button" class="btn btn-primary"><b>Call 13 19 88</b>
+                            </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-primary" id="existingCustombtn" onclick="hideCustomerInformation()">Existing Customer</button>
@@ -175,13 +193,33 @@
                     </div>
                     <div class="card-footer">
                         <div style="float:right;">
-                            <button type="button" class="btn btn-primary" onclick="save()">confirm</button>
+                            <button type="button" class="btn btn-primary" ata-toggle="modal" data-target="#exampleModal">confirm</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
     function hideCustomerInformation(){
@@ -193,6 +231,10 @@
         $("#customerInformation").show(500);
         $("#existingCustomer").hide(500);
         $("#existingCustombtn").attr("disabled", false);
+    }
+
+    function save(){
+
     }
 </script>
 </body>
