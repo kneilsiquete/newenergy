@@ -43,6 +43,52 @@
             </div>
         </div>
     </div>
+
+    <div id="existingCustomer" style="margin-top:2%; display:none;">
+        <div class="row">
+            <div class="col-lg">
+                <div class="card h-200">
+                    <h4 class="card-header">Existing Customer:</h4>
+                    <div class="card-body">
+                        <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="control-label col" for="pwd">Email:</label>
+                                <div class="col">          
+                                    <input type="text" class="form-control" placeholder="Enter email address" >
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="float:right;">
+                            <button type="button" class="btn btn-primary" onclick="showCustomerInformation()">cancel</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">confirm</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            One-Time Password
+                                        </div>
+                                        <div class="modal-body">
+                                            Enter one-time password sent to your email. <br />
+                                            <input type="text" id="oneTimePassword"/>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <div class="row" style="margin-top:2%;">
         <div class="col-lg">
@@ -110,52 +156,7 @@
         </div>
     </div>
 
-    <div id="existingCustomer" style="margin-top:2%; display:none;">
-        <div class="row">
-            <div class="col-lg">
-                <div class="card h-200">
-                    <h4 class="card-header">Existing Customer:</h4>
-                    <div class="card-body">
-                        <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label class="control-label col" for="pwd">Email:</label>
-                                <div class="col">          
-                                    <input type="text" class="form-control" placeholder="Enter email address" >
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div style="float:right;">
-                            <button type="button" class="btn btn-primary" onclick="showCustomerInformation()">cancel</button>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">confirm</button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            One-Time Password
-                                        </div>
-                                        <div class="modal-body">
-                                            Enter one-time password sent to your email. <br />
-                                            <input type="text" id="oneTimePassword"/>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <form>
     <div id="customerInformation"  style="margin-top:2%; "> 
         <div class="row">
             <div class="col-lg">
@@ -174,7 +175,8 @@
                                         </select>
                                 </div>
                                 <div>
-                                    Firstname: <input type="text" id="firstname"/>
+                                    <label for="fname">Firstname:</label>
+                                    <span><input type="text" id="fname" name="fname" placeholder="Input name"></span>
                                 </div>
                                 <div>
                                     Lastname: <input type="text" id="lastname"/>
@@ -255,6 +257,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 <script>
     function hideCustomerInformation(){
