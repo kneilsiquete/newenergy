@@ -31,6 +31,20 @@
     <div class="row">
         <div>
             <h1>Apply now</h1>
+            <span>
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#callUs"><b>Call 13 19 88</b></button>
+                <!-- Modal -->
+                <div class="modal fade" id="callUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <p style="text-align:left;">Your Quotation number is: <b>777681</b></p>
+                            <img src="images/dialing.gif" alt="Logo" border="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </span>
         </div>
     </div>
    
@@ -40,6 +54,21 @@
             <div class="card-body">
                 <p class="card-text"><strong>You have selected:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg">
+            <div class="card h-200">
+                <h4 class="card-header">FOR EXISTING CUSTOMERS ONLY:</h4>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary" id="existingCustombtn" onclick="hideCustomerInformation()">Existing Customer</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -125,35 +154,10 @@
         </div>
     </div>
     <div>
-        Subscribe To Energy Switch <br />
-        <input type="checkbox" id="subscribe" name="subscribe" value="Subscribe To Energy Switch">
-            <label for="subscribe">To get better products in the future through email</label>
+        Subscribe To ISelect Newsletter <br />
+        <input type="checkbox" id="subscribe" name="subscribe" value="Subscribe To ISelect Newsletter">
+            <label for="subscribe">Receive updates from ISelect and check for better products through your email</label>
         </checkbox>
-    </div>
-    <div class="row">
-        <div class="col-lg">
-            <div class="card h-200">
-                <h4 class="card-header">Other options:</h4>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#callUs"><b>Call 13 19 88</b></button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="callUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <img src="images/dialing.gif" alt="Logo" border="0">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-primary" id="existingCustombtn" onclick="hideCustomerInformation()">Existing Customer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <form>
@@ -275,7 +279,7 @@
                                             <input type="text" id="oneTimePassword"/>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal"><a href="\\newenergy\\page4.html" target="_self">OK</a></button>
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
