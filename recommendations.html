@@ -44,26 +44,59 @@
 
         <div id="filters" class="row clearfix">
             <div class="col-lg-12 mb-12">
-                <div class="card h-100">
+                <div class="card h-200">
                     <h3 class="card-header">Refine Recommendations</h3>
                     <div class="card-body">
 
-                        <div class="checkbox">
-                            <div class="float-left">
+                        <div class="row">
+                            <div class="checkbox float-left">
                                 <label class="checkbox-inline">
                                     Do you have rooftop solar panels?
                                 </label>
-                                <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="warning" data-offstyle="info">
+                                <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
+                                    data-onstyle="warning" data-offstyle="info">
                             </div>
 
-                            <div class="float-right">
+                            <div class="checkbox float-right">
                                 <label class="checkbox-inline">
                                     Upload your e-bill for an accurate comparison in seconds.?
                                 </label>
-                                <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="warning" data-offstyle="info">
+                                <input id="upload-toggle" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="warning"
+                                    data-offstyle="info">
                             </div>
                         </div>
-                    </div>
+
+                        <br>
+                        <!-- Upload bill -->
+                        <div class="row d-none" id="upload-row">
+                            <div class="col-lg-12">
+                                <div class="custom-file overflow-hidden rounded-pill mb-5">
+                                    <input id="customFile" type="file" class="custom-file-input rounded-pill">
+                                    <label for="customFile" class="custom-file-label rounded-pill">Choose bill file</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <br>
+                        <!-- Usage Type -->
+                        <div class="row" id="usage-type">
+                            <div class="col-lg-12">
+                                Usage type: 
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="options" id="option1" checked> Low
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" id="option2"> Medium
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" id="option3"> High
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.card-body-->
+                    
                 </div>
             </div>
         </div>
@@ -85,7 +118,7 @@
                         </li>
                         <li class="list-group-item">Vestibulum at eros</li>
                         <li class="list-group-item">
-                            <a href="#" class="btn btn-primary">Sign Up!</a>
+                            <a href="#" class="btn btn-primary">Apply Now!</a>
                         </li>
                     </ul>
                 </div>
@@ -104,7 +137,7 @@
                         </li>
                         <li class="list-group-item">Vestibulum at eros</li>
                         <li class="list-group-item">
-                            <a href="#" class="btn btn-primary">Sign Up!</a>
+                            <a href="#" class="btn btn-primary">Apply Now!</a>
                         </li>
                     </ul>
                 </div>
@@ -123,7 +156,7 @@
                         </li>
                         <li class="list-group-item">Vestibulum at eros</li>
                         <li class="list-group-item">
-                            <a href="#" class="btn btn-primary">Sign Up!</a>
+                            <a href="#" class="btn btn-primary">Apply Now!</a>
                         </li>
                     </ul>
                 </div>
@@ -147,6 +180,22 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/tooglebootstrap/bootstrap-toggle.min.js"></script>
+
+    <script>
+        $(function() {
+            $('#upload-toggle').change(function () {
+                $('#upload-row').toggleClass("d-none");
+            });
+
+            $('#customFile').change(function() {
+                $('#usage-type #option3').parent().addClass('active')
+                $('#usage-type #option1').parent().removeClass('active');
+                
+                //
+                $('#pricing').load("reco/reco-2.html");
+            });
+        })
+    </script>
 </body>
 
 </html>
