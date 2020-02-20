@@ -20,3 +20,14 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
