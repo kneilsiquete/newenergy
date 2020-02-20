@@ -17,9 +17,9 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand" href="index.html">YOUSELECT</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -49,27 +49,32 @@
                     <div class="card-body">
 
                         <div class="row">
-                            <div class="checkbox float-left">
-                                <label class="checkbox-inline">
-                                    Do you have rooftop solar panels?
-                                </label>
-                                <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
-                                    data-onstyle="warning" data-offstyle="info">
+                            <div class="col-12">
+                                <div class="checkbox">
+                                    <label class="checkbox-inline">
+                                        Do you have rooftop solar panels?
+                                    </label>
+                                    <input type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" 
+                                        data-onstyle="primary" data-offstyle="secondary">
+                                </div>
                             </div>
-
-                            <div class="checkbox float-right">
-                                <label class="checkbox-inline">
-                                    Upload your e-bill for an accurate comparison in seconds.?
-                                </label>
-                                <input id="upload-toggle" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-onstyle="warning"
-                                    data-offstyle="info">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="checkbox">
+                                    <label class="checkbox-inline">
+                                        Upload your e-bill for an accurate comparison in seconds.?
+                                    </label>
+                                    <input id="upload-toggle" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No"
+                                        data-onstyle="primary" data-offstyle="secondary">
+                                </div>
                             </div>
                         </div>
 
                         <br>
                         <!-- Upload bill -->
                         <div class="row d-none" id="upload-row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <div class="custom-file overflow-hidden rounded-pill mb-5">
                                     <input id="customFile" type="file" class="custom-file-input rounded-pill">
                                     <label for="customFile" class="custom-file-label rounded-pill">Choose bill file</label>
@@ -77,7 +82,6 @@
                             </div>
                         </div>
                         
-                        <br>
                         <!-- Usage Type -->
                         <div class="row" id="usage-type">
                             <div class="col-lg-12">
@@ -170,7 +174,7 @@
     <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">
-                Copyright &copy; iSelect Ltd 2020
+                Copyright &copy; YOUSELECT 2020
             </p>
         </div>
         <!-- /.container -->
@@ -191,8 +195,12 @@
                 $('#usage-type #option3').parent().addClass('active')
                 $('#usage-type #option1').parent().removeClass('active');
                 
-                //
-                $('#pricing').load("reco/reco-2.html");
+                $('#pricing').html('<img class="center-img" width="200" height="200" src="images/loading.gif" style="margin:0 auto;" />');
+
+                // Change recommendations after 1 sec
+                setTimeout(function() {
+                    $('#pricing').load("reco/reco-2.html");
+                }, 1500);
             });
         })
     </script>
