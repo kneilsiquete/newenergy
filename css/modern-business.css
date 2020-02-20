@@ -31,3 +31,6 @@ body {
   margin-right: auto;
   width: 50%;
 }
+.bg-iselect {
+  background-color: #ff7f02;
+}
