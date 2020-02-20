@@ -165,66 +165,96 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
-                                <label class="control-label col" for="email">Title:</label>
-                                <div class="col">
-                                    <select id="title">
+                                <div>
+                                <label for="email">Title:</label><br>
+                                <span>
+                                    <select id="title" class="form-control">
                                         <option value="Dr">Dr</option>
                                         <option value="Mr.">Mr</option>
                                         <option value="Ms">Ms</option>
                                         <option value="Mrs">Mrs</option>
-                                        </select>
+                                    </select>
+                                </span>
                                 </div>
                                 <div>
-                                    <label for="fname">Firstname:</label>
-                                    <span><input type="text" id="fname" name="fname" placeholder="Input name"></span>
+                                    <label for="fname">Firstname:</label><br>
+                                    <span><input type="text" class="form-control" id="fname" name="fname" placeholder="Input First name"></span>
                                 </div>
                                 <div>
-                                    Lastname: <input type="text" id="lastname"/>
+                                    <label for="fname">Lastname:</label><br>
+                                    <span><input type="text" class="form-control" id="lastname" name="lastname" placeholder="Input Last name"></span>
                                 </div>
                                 <div>
-                                    Mobile Number: <input type="text" id="lastname"/>
+                                    <label for="fname">Mobile Number:</label><br>
+                                    <span><input type="text" class="form-control" id="mobile" name="mobile" placeholder="Input Number"></span>
                                 </div>
                                 <div>
-                                    Other Number (Optional): <input type="text" id="lastname"/>
+                                    <label for="fname">Other Number (Optional):</label><br>
+                                    <span><input type="text" class="form-control" id="otherNum" name="otherNum" placeholder="Input other number"></span>
                                 </div>
                                 <div>
-                                    Email Address: <input type="text" id="lastname"/>
+                                    <label for="fname">Email Address:</label><br>
+                                    <span><input type="text" class="form-control" id="eadd" name="eadd" placeholder="Input Email Address"></span>
                                 </div>
                                 <div>
-                                    Date of Birth: <input type="text" id="lastname"/>
+                                    <label for="fname">Date of Birth:</label><br>
+                                    <span><input type="text" class="form-control" id="bday" name="bday" placeholder="dd/mm/yyyy"></span>
                                 </div>
                                 <div>
-                                    Do you want to Add an Additional Account Holder?: <input type="text" id="lastname"/>
+                                    <label for="fname">Do you want to Add an Additional Account Holder?:</label><br>
+                                    <span><input type="text" class="form-control" id="additionalAcctHolder" name="additionalAcctHolder" placeholder="Additional Account Holder"></span>
                                 </div>
                                 <div>
-                                    ID Type (Drop Down, copy existing): <input type="text" id="lastname"/>
+                                    <label for="fname">ID Type (Drop Down, copy existing):</label><br>
+                                    <span><input type="text" class="form-control" id="idType" name="idType" placeholder="upload Id"></span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div>
-                                    ID Number: <input type="text" id="lastname"/>
+                                    <label for="fname">ID Number:</label><br>
+                                    <span><input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="id Number"></span>
                                 </div>
 
                                 <div>
-                                    ID Expiry Date: <input type="text" id="lastname"/>
+                                    <label for="fname">ID Expiry Date:</label><br>
+                                    <span><input type="text" class="form-control" id="idExpDate" name="idExpDate" placeholder="dd/mm/yyyy"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fname">Concession Card Holder (Yes) (No):</label><br>
+                                    <span>
+                                        <label for="concession"><input type="checkbox" class="form-control" id="concession" name="concession">Yes</label>
+                                        <label for="concession2"><input type="checkbox" class="form-control" id="concession2" name="concession2">No</label>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fname"> Does anyone in the household require the use of medical equipment, where their health may be impacted if there was an outage?:</label><br>
+                                    <span>
+                                        <label for="concession"><input type="checkbox" class="form-control" id="concession" name="concession">Yes</label>
+                                        <label for="concession2"><input type="checkbox" class="form-control" id="concession2" name="concession2">No</label>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fname">Is your postal address the same as connection address?:</label><br>
+                                    <span>
+                                        <label for="concession"><input type="checkbox" class="form-control" id="concession" name="concession">Yes</label>
+                                        <label for="concession2"><input type="checkbox" class="form-control" id="concession2" name="concession2">No</label>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fname">Are you moving into this property? (Yes) (No) if (No) THEN show field Postal Address:</label><br>
+                                    <span>
+                                        <label for="concession"><input type="checkbox" class="form-control" id="concession" name="concession">Yes</label>
+                                        <label for="concession2"><input type="checkbox" class="form-control" id="concession2" name="concession2">No</label>
+                                    </span>
                                 </div>
                                 <div>
-                                    Concession Card Holder (Yes) (No): <input type="text" id="lastname"/>
+                                    <label for="fname">What is your NMI number for electricity?:</label><br>
+                                    <span><input type="text" id="nmi" name="nmi" placeholder="your NMI number"></span>
                                 </div>
                                 <div>
-                                    Does anyone in the household require the use of medical equipment, where their health may be impacted if there was an outage? (Yes) (No): <input type="text" id="lastname"/>
-                                </div>
-                                <div>
-                                    Is your postal address the same as connection address?: <input type="text" id="lastname"/>
-                                </div>
-                                <div>
-                                    Are you moving into this property? (Yes) (No) if (No) THEN show field Postal Address: <input type="text" id="lastname"/>
-                                </div>
-                                <div>
-                                    What is your NMI number for electricity?: <input type="text" id="lastname"/>
-                                </div>
-                                <div>
-                                    What is your MIRN number for gas?: <input type="text" id="lastname"/>
+                                    <label for="fname">What is your MIRN number for gas?:</label><br>
+                                    <span><input type="text" id="mirn" name="mirn" placeholder="your MIRN number"></span>
+
                                 </div>
                             </div>
                                 
