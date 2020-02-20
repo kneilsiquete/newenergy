@@ -32,7 +32,138 @@ body {
   width: 50%;
 }
 
-.bg-iselect, #usage-type .active{
-  background-color: #ff7f02 !important; 
+.bg-iselect,
+#usage-type .active {
+  background-color: #ff7f02 !important;
 }
 
+.details .modal {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.details .modal h3 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.details .modal h4 {
+  color: #007bff;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.details .emailPlan,
+.emailPlan:hover {
+  color: #007bff;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none !important;
+  display: inline-block;
+  line-height: 15px;
+}
+.details .dtls_term {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+  color: #797e85;
+}
+.details .applyBtn {
+  margin-right: 67px;
+  color: white;
+  background: #007bff;
+  background-color: #007bff;
+  background-image: -webkit-linear-gradient(#007bff, #007bff);
+  background-image: linear-gradient(#007bff, #007bff);
+  text-transform: uppercase;
+  width: 180px;
+  height: 48px;
+  font-weight: bold;
+}
+.details .applyBtn:hover {
+  color: white;
+  box-shadow: 2px 2px 2px #add8e6;
+  cursor: pointer;
+}
+.details .features div {
+  color: #797e85;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+}
+.details .dtls_term h2 {
+  font-size: 12px !important;
+  line-height: 14px !important;
+  font-weight: bold;
+}
+.details .dtls_term h2 button:hover {
+  text-decoration: none;
+  color: #3366cc;
+}
+.details .dtls_term h2 button {
+  color: #3366cc;
+  padding: 0 !important;
+  font-size: 12px !important;
+  line-height: 0 !important;
+}
+.details .why_provider {
+  color: #797e85;
+  font-size: 13px;
+}
+.details .why_provider i {
+  padding-right: 4px;
+}
+.details .phone-us-ctc {
+  color: #484b51;
+  letter-spacing: -1px;
+  line-height: 41px;
+  display: table-cell;
+  vertical-align: middle;
+  display: inline;
+}
+.details .phone-us-ctc span {
+  font-size: 41px;
+  font-weight: bold;
+  padding-left: 12px;
+}
+.details .phone-us-ctc i {
+  width: 21px;
+  height: 27px;
+  color: #007bff;
+}
+.details .nav-link.active {
+  background-color: #007bff !important;
+  font-weight: bold;
+  color: #fff;
+  font-weight: bold;
+}
+.details .nav-link,
+.nav-link:hover {
+  color: #007bff;
+}
+.details .tab-pane {
+  background: #dfe4e7;
+}
+.details .tab-pane .row {
+  font-size: 13px;
+  background: #eef0f2;
+  color: #797e85;
+  border: 1px solid #fff;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.details .tab-pane .row .col {
+  padding: 10px 20px;
+}
+.details .tab-pane p {
+  color: #797e85;
+  font-size: 12px;
+  line-height: 14px;
+}
+.details .head {
+  background: #e3e7ea !important;
+  color: #797e85 !important;
+}
