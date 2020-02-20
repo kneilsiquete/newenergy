@@ -31,6 +31,8 @@ body {
   margin-right: auto;
   width: 50%;
 }
-.bg-iselect {
-  background-color: #ff7f02;
+
+.bg-iselect, #usage-type .active{
+  background-color: #ff7f02 !important; 
 }
+
