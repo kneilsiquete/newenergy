@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    
+  </head>
+
+  <body>
+    <style>
+      .modal {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .modal h3 {
+        font-style: normal;
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .modal h4 {
+        color: #e3710a;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+      }
+      .emailPlan, .emailPlan:hover {
+        color: #e3710a;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: none !important;
+        display: inline-block;
+        line-height: 15px;
+      }
+      .dtls_term {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0;
+        padding: 0;
+        color: #797e85;
+      }
+      .applyBtn {
+        margin-right: 67px;
+        color: white;
+        background: #e3710a;
+        background-color: #e3710a;
+        background-image: -webkit-linear-gradient(#f07c00, #e46e3b);
+        background-image: linear-gradient(#f07c00, #e46e3b);
+        text-transform: uppercase;
+        width: 180px;
+        height: 48px;
+        font-weight: bold;
+      }
+      .applyBtn:hover {
+        color: white;
+        box-shadow: 2px 2px 2px #ADD8E6;
+        cursor: pointer;
+      }
+      .features div{
+        color: #797e85;
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 14px;
+      }
+      .dtls_term h2 {
+        font-size: 12px !important;
+        line-height: 14px !important;
+        font-weight: bold;
+      }
+      .dtls_term h2 button:hover {
+        text-decoration: none;
+        color: #3366cc;
+      }
+      .dtls_term h2 button {
+        color: #3366cc;
+        padding: 0 !important;
+        font-size: 12px !important; 
+        line-height: 0 !important;
+      }
+      .why_provider {
+        color: #797e85;
+        font-size: 13px;
+      }
+      .why_provider i {
+        padding-right: 4px;
+      }
+      .phone-us-ctc {
+        color: #484b51;
+        letter-spacing: -1px;
+        line-height: 41px;
+        display: table-cell;
+        vertical-align: middle;
+        display: inline;
+      }
+      .phone-us-ctc span {
+        font-size: 41px;
+        font-weight: bold;
+        padding-left: 12px;
+      }
+      .phone-us-ctc i {
+        width: 21px;
+        height: 27px;
+        color: #e3710a;
+      }
+      .nav-link.active {
+        background-color: #e3710a !important;
+        font-weight: bold;
+        color: #fff;
+        font-weight: bold;
+      }
+      .nav-link, .nav-link:hover {
+        color: #e3710a;
+      }
+      .tab-pane {
+        background: #dfe4e7;
+      }
+      .tab-pane .row {
+        font-size: 13px;
+        background: #eef0f2;
+        color: #797e85;
+        border: 1px solid #fff;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .tab-pane .row .col {
+        padding: 10px 20px;
+      }
+      .tab-pane p {
+        color: #797e85;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      .head {
+        background: #e3e7ea !important;
+        color: #797e85 !important;
+      }
+    </style>
+
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Open modal
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+              <div class="form-group">
+                <button type="button" class="btn applyBtn">Apply Now</button>
+                <button type="button" class="emailPlan btn btn-link">Email plan details</button>
+              </div>
+              <div class="form-group features">
+                <h3>Features</h3>
+
+                <h4>No confusing discounts. Just simple, transparent pricing.</h4>
+                <div>Momentum Energy has ditched discounting in favour of delivering simple rates you can easily understand. With zero cheeky conditions and zero catches, it’s fair, transparent and simple.</div>
+                
+                <h4>Australian-based call centres.</h4>
+                <div>Not only is Momentum 100% Australian owned and operated, their call centres are in Melbourne and Hobart. So if you ever need help, you don’t have to call overseas to get it.</div>
+                
+                <h4>Support renewable energy.</h4>
+                <div>Momentum Energy is 100% owned by Hydro Tasmania – Australia’s largest renewable energy generator. Choose Momentum and you support clean Aussie renewables. Feels good, eh?</div>
+                
+                <h4>Get great customer service.</h4>
+                <div>It’s not just Momentum saying this. In 2019, Canstar Blue gave them a 5-star rating  for customer service in several categories and Mozo awarded them for Excellent Customer Service – all based on feedback from customers themselves.</div>
+
+                <h4>Flexible payment options.</h4>
+                <div>Choose a payment option that works for you. Momentum also offers monthly billing for electricity – a great way to stay in control of your budget. Just ask.</div>
+
+                <h4>Online account management.</h4>
+                <div>Pay your bills and update your details online.</div>
+              </div>
+              <div class="form-group why_provider">
+                <h3>Why Momentum?</h3>
+                <div><i class="fas fa-check"></i> No confusing discounts.</div>
+                <div><i class="fas fa-check"></i> Just great rates.</div>
+                <div><i class="fas fa-check"></i> 100% Australian ownedAward Winning Customer Service</div>
+              </div>
+              <br/>
+              <!-- Nav pills -->
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="pill" href="#home">Electricity details</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu1">Gas details</a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane container active" id="home"><br/>
+                  <h3>Plan details</h3>
+                  <h4>Discounts and fees</h4><br/>
+                  <div class="row">
+                    <div class="col">
+                      Discounts and Bonuses
+                    </div>
+                    <div class="col">
+                      A great low rate on your usage & supply charges
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Contract Exit Fee
+                    </div>
+                    <div class="col">
+                      No exit fee
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Dishonoured Payment Fee
+                    </div>
+                    <div class="col">
+                      Cheque ($6.50 GST Not Applicable), Direct Debit ($2.30 GST Not Applicable)
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Card Payment Fee
+                    </div>
+                    <div class="col">
+                      0.45% Payment Processing Fee
+                    </div>
+                  </div><br/>
+                  <h4>Other details</h4><br/>
+                  <div class="row">
+                    <div class="col">
+                      Green options
+                    </div>
+                    <div class="col">
+                      Get 10% of your electricity usage from GreenPower accredited renewable energy sources for an extra $1.10 per week inc GST
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Billing Options
+                    </div>
+                    <div class="col">
+                      Monthly, bi-monthly or quarterly, you have more control over when and how you receive your energy bills. By choosing My AGL Monthly Bill, you can receive your electricity and/or gas bills each month on a day that you choose.
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Payment Options
+                    </div>
+                    <div class="col">
+                      AGL My Account online, AGL Energy App, Credit Card- Visa, MasterCard, BPAY, Pay by Phone, Direct Debit, Cash (Australia Post - $2.20 inc GST), Centerpay, Post Billpay, PayPal.
+                    </div>
+                  </div><br/>
+                  <h3>Rates details</h3>
+                  <p>The price you pay for energy services includes tariff and other feeds and charges. The rates applicable to your address is dependent on your distribution area and meter type, which you should be able to find on your energy bills. The meter number (10 to 11 digits usually found on back of the bill) is used to identify the type of meter.</p>
+                  <div class="row">
+                    <div class="col">
+                      Network area
+                    </div>
+                    <div class="col">
+                      EVTCTTRE
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Effective from
+                    </div>
+                    <div class="col">
+                      Updated Connection Fee - 01/01/2020
+                    </div>
+                  </div>
+                  <div class="row head">
+                    <div class="col"></div>
+                    <div class="col">
+                      Price (Incl GST)
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Daily supply charge
+                    </div>
+                    <div class="col">
+                      81.73 cents per day
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Peak usage of first 1644.0 MJ bimonthly
+                    </div>
+                    <div class="col">
+                      2.1857 cents per MJ
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Peak usage of next 1314.0 MJ bimonthly
+                    </div>
+                    <div class="col">
+                      2.1384 cents per MJ
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Remaining peak usage
+                    </div>
+                    <div class="col">
+                      1.4498 cents per MJ
+                    </div>
+                  </div>
+                  <br/>
+                  <p>Any pricing we display is indicative based on the rates our providers have given us and information provided by you. Any energy plan and network presented will be based on the postcode you have provided and you will be advised by the retailer if your rates subsequently differ due to a different meter type or network.</p><br/>
+                </div>
+                <div class="tab-pane container fade" id="menu1"><br/>
+                  <h3>Plan details</h3>
+                  <h4>Discounts and fees</h4><br/>
+                  <div class="row">
+                    <div class="col">
+                      Discounts and Bonuses
+                    </div>
+                    <div class="col">
+                      0
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Contract Exit Fee
+                    </div>
+                    <div class="col">
+                      No exit fee
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Dishonoured Payment Fee
+                    </div>
+                    <div class="col">
+                      0
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Card Payment Fee
+                    </div>
+                    <div class="col">
+                      No Credit Card Fees.
+                    </div>
+                  </div><br/>
+                  <h4>Other details</h4><br/>
+                  <div class="row">
+                    <div class="col">
+                      Billing Options
+                    </div>
+                    <div class="col">
+                      Quarterly (or monthly for smart meters).
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Payment Options
+                    </div>
+                    <div class="col">
+                      Direct Debit (Bank Account, VISA and MasterCard only), BPay, Credit Card (Visa/MasterCard/American Express), Online, Cash (Aust Post), Cheque, Post Bill Pay.
+                    </div>
+                  </div><br/>
+                  <h3>Rates details</h3>
+                  <p>The price you pay for energy services includes tariff and other feeds and charges. The rates applicable to your address is dependent on your distribution area and meter type, which you should be able to find on your energy bills. The meter number (10 to 11 digits usually found on back of the bill) is used to identify the type of meter.</p>
+                  <div class="row">
+                    <div class="col">
+                      Network area
+                    </div>
+                    <div class="col">
+                      EVTCTTRE
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Effective from
+                    </div>
+                    <div class="col">
+                      Updated Connection Fee - 01/01/2020
+                    </div>
+                  </div>
+                  <div class="row head">
+                    <div class="col"></div>
+                    <div class="col">
+                      Price (Incl GST)
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Daily supply charge
+                    </div>
+                    <div class="col">
+                      81.73 cents per day
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Peak usage of first 1644.0 MJ bimonthly
+                    </div>
+                    <div class="col">
+                      2.1857 cents per MJ
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Peak usage of next 1314.0 MJ bimonthly
+                    </div>
+                    <div class="col">
+                      2.1384 cents per MJ
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      Remaining peak usage
+                    </div>
+                    <div class="col">
+                      1.4498 cents per MJ
+                    </div>
+                  </div>
+                  <br/>
+                  <p>The prices shown are indicative prices based on the rates our participating providers have given us, your postcode and information provided by you.</p><br/>
+                </div>
+              </div>
+              <br/>
+              <div class="form-group">
+                <button type="button" class="btn applyBtn">Apply Now</button>
+                <div class="phone-us-ctc"><i class="fas fa-phone-volume fa-2x "></i><span>13 19 20</span></div>
+              </div>
+              <br/>
+              <div class="form-group dtls_term">
+                <h2>Terms and conditions - <button type="button" class="btn btn-link">click here</button></h2>
+                <p>Get Basic Plan Information Documents and Energy Fact Sheets at www.momentum.com.au/plan-info, or on request from Momentum</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
