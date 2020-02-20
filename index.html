@@ -145,15 +145,13 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item bg-dark">
-                <a class="navbar-brand" href="index.html"
-                  >Call Us 123-432-543</a
-                >
+                <a class="navbar-brand" href="index.html">Call Us 13 19 20</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <h1 class="my-4">Victorian Electricity Recommendation</h1>
+      <h1 class="my-4" id="titleheader">Electricity Recommendation</h1>
       <!-- /.row -->
 
       <div class="row">
@@ -161,27 +159,33 @@
           <div class="card h-100">
             <a href="#"
               ><img
-                src="images/Origin.png"
+                src="images/loading.gif"
                 alt=""
                 width="200px"
                 height="150px"
                 class="center-image"
+                id="logo"
             /></a>
             <div class="card-body">
-              <h4 class="card-title">
-                Origin Max Saver Vic
-              </h4>
-              <p class="card-text">
-                Estimated Cost $463/91 days
-              </p>
+              <h4 class="card-title" id="product"></h4>
+              <p class="card-text" id="estimatedcost"></p>
+              <p class="card-text" id="estimatedcostelec"></p>
+              <p class="card-text" id="estimatedcostgas"></p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row mb-4">
+      <div class="row mb-4" hidden id="applybtn">
         <div class="col-md-4 col-centered">
           <a class="btn btn-lg btn-secondary btn-block" href="#">Apply Now</a>
+        </div>
+      </div>
+      <div class="row mb-4" hidden id="callus">
+        <div class="col-md-4 col-centered">
+          <div class="text-center">
+            or <i class="fa fa-phone-volume"></i>Call Us 13 19 20
+          </div>
         </div>
       </div>
     </div>
@@ -202,11 +206,11 @@
 
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item col-centered btn-group">
-        <button class="btn btn-lg btn-block btn-light">
+        <button class="btn btn-lg btn-light" id="elecbtn">
           <i class="fa fa-bolt"></i> Electricity</button
-        ><button class="btn btn-lg btn-block btn-light">
+        ><button class="btn btn-lg btn-light" id="gasbtn">
           <i class="fa fa-fire"></i> Gas</button
-        ><button class="btn btn-lg btn-block btn-light">
+        ><button class="btn btn-lg btn-light" id="bundlebtn">
           <i class="fa fa-bolt"></i>
           <i class="fa fa-fire"></i> Elec & Gas
         </button>
@@ -235,17 +239,102 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
-      getLocation();
-      function getLocation() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-          x.innerHTML = "Geolocation is not supported by this browser.";
+      $(document).ready(function() {
+        getLocation();
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
         }
-      }
-      function showPosition(position) {
-        $("#postcode").val("3000, Melbourne");
-      }
+        function showPosition(position) {
+          $("#postcode").val(3000);
+          $("#titleheader").text("Victoria Electricity Recommendation");
+          $("#logo").attr("src", "images/Origin.png");
+          $("#product").text("Origin Max Saver");
+          $("#estimatedcost").text("Estimated Cost: $463/91 days");
+          $("#applybtn").attr("hidden", false);
+          $("#callus").attr("hidden", false);
+        }
+
+        function changeTitle(postcodeVal, vertical) {
+          let success = true;
+          if (postcodeVal >= 900 && postcodeVal <= 999) {
+            $("#titleheader").text("Northern Territory " + vertical);
+          } else if (
+            (postcodeVal >= 2000 && postcodeVal <= 2599) ||
+            (postcodeVal >= 2921 && postcodeVal <= 2999)
+          ) {
+            $("#titleheader").text("New South Wales " + vertical);
+          } else if (postcodeVal >= 2600 && postcodeVal <= 2618) {
+            $("#titleheader").text("Australian Capital Territory " + vertical);
+          } else if (postcodeVal >= 3000 && postcodeVal <= 3999) {
+            $("#titleheader").text("Victoria " + vertical);
+          } else if (postcodeVal >= 4000 && postcodeVal <= 4999) {
+            $("#titleheader").text("Queensland " + vertical);
+          } else if (postcodeVal >= 5000 && postcodeVal <= 5999) {
+            $("#titleheader").text("South Australia " + vertical);
+          } else if (postcodeVal >= 6000 && postcodeVal <= 6999) {
+            $("#titleheader").text("Western Australia " + vertical);
+          } else if (postcodeVal >= 7000 && postcodeVal <= 7999) {
+            $("#titleheader").text("Tasmania " + vertical);
+          } else {
+            $("#titleheader").text(vertical);
+            success = false;
+          }
+          return success;
+        }
+
+        $("#elecbtn").click(function() {
+          const postcodeVal = parseInt($("#postcode").val());
+          if (changeTitle(postcodeVal, "Electricity Recommendation")) {
+            $("#logo").attr("src", "images/Origin.png");
+            $("#product").text("Origin Max Saver");
+            $("#estimatedcost").text("Estimated Cost: $463/91 days");
+            $("#estimatedcostelec").text("");
+            $("#estimatedcostgas").text("");
+            $("#applybtn").attr("hidden", false);
+            $("#callus").attr("hidden", false);
+          } else {
+            alert("Enter Valid Post Code");
+          }
+        });
+        $("#gasbtn").click(function() {
+          const postcodeVal = parseInt($("#postcode").val());
+          if (changeTitle(postcodeVal, "Gas Recommendation")) {
+            $("#logo").attr("src", "images/Momentum.png");
+            $("#product").text("Gas");
+            $("#estimatedcost").text("Estimated Cost: $139/61 days");
+            $("#estimatedcostelec").text("");
+            $("#estimatedcostgas").text("");
+            $("#applybtn").attr("hidden", false);
+            $("#callus").attr("hidden", false);
+          } else {
+            alert("Enter Valid Post Code");
+          }
+        });
+        $("#bundlebtn").click(function() {
+          const postcodeVal = parseInt($("#postcode").val());
+          if (
+            changeTitle(
+              postcodeVal,
+              "Electricity and Gas Bundle Recommendation"
+            )
+          ) {
+            $("#logo").attr("src", "images/AGL.png");
+            $("#product").text("ESSENTIAL SAVER");
+            $("#estimatedcost").text("Estimated Cost: ");
+            $("#estimatedcostelec").text("ELEC $340/91 days");
+            $("#estimatedcostgas").text("GAS $124/61 days");
+            $("#applybtn").attr("hidden", false);
+            $("#callus").attr("hidden", false);
+          } else {
+            alert("Enter Valid Post Code");
+          }
+        });
+      });
     </script>
   </body>
 </html>
