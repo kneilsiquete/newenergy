@@ -58,27 +58,11 @@
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-lg">
-            <div class="card h-200">
-                <h4 class="card-header">FOR EXISTING CUSTOMERS ONLY:</h4>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <button type="button" class="btn btn-primary" id="existingCustombtn" onclick="hideCustomerInformation()">Existing Customer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="existingCustomer" style="margin-top:2%; display:none;">
+    <div id="existingCustomer" style="margin-top:2%;">
         <div class="row">
             <div class="col-lg">
                 <div class="card h-200">
-                    <h4 class="card-header">Existing Customer:</h4>
+                    <h4 class="card-header">FOR EXISTING CUSTOMERS ONLY:</h4>
                     <div class="card-body">
                         <div class="row">
                         <div class="col">
@@ -93,7 +77,6 @@
                     </div>
                     <div class="card-footer">
                         <div style="float:right;">
-                            <button type="button" class="btn btn-primary" onclick="showCustomerInformation()">cancel</button>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">confirm</button>
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -123,13 +106,13 @@
     <div class="row" style="margin-top:2%;">
         <div class="col-lg">
             <div class="card h-200">
-                <h4 class="card-header">For Faster Transaction: Upload ID</h4>
+                <h4 class="card-header">For Faster Transaction</h4>
                 <div class="card-body">
                     <div class="row">
                         <div class="col">  
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                  <span class="input-group-text" id="inputGroupFileAddon01">Upload Identification</span>
                                 </div>
                                 <div class="custom-file">
                                   <input type="file" class="custom-file-input" id="inputGroupFile01"
@@ -138,34 +121,28 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" style="margin-top:2%;">
-        <div class="col-lg">
-            <div class="card h-200">
-                <h4 class="card-header">Upload your current bill (Optional)</h4>
-                <div class="card-body">
+                    </div><br />
+
                     <div class="row">
                         <div class="col">  
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                  <span class="input-group-text" id="inputGroupFileAddon02">Upload your current bill (Optional)</span>
                                 </div>
                                 <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                    aria-describedby="inputGroupFileAddon01" onclick="showBasicInformation();">
-                                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                  <input type="file" class="custom-file-input" id="inputGroupFile02"
+                                    aria-describedby="inputGroupFileAddon02" onclick="showBasicInformation();">
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+    
     <div>
         Subscribe To ISelect Newsletter <br />
         <input type="checkbox" id="subscribe" name="subscribe" value="Subscribe To ISelect Newsletter">
