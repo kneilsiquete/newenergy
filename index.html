@@ -560,13 +560,14 @@
         function getLocation() {
           if (navigator.geolocation) {
             try {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } catch(err) {
-                showPosition(true);
+              navigator.geolocation.getCurrentPosition(showPosition);
+            } catch (err) {
+              showPosition(true);
             }
           } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
           }
+          showPosition(true);
         }
         function showPosition(position) {
           $("#postcode").val(3000);
