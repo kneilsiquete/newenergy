@@ -1,135 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta
+      name="description"
+      content="Use iSelect to compare a range of energy rates on electricity and gas from Australian suppliers and you could save on your next energy bill"
+    />
+    <meta
+      name="keywords"
+      content="gas,electricity,energy,energy plans comparison,australia"
+    />
+    <meta name="author" content="iSelect" />
+    <title>Document</title>
 
-    <title>Energy Product Recommendation</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
     <link
+      href="vendor/tooglebootstrap/bootstrap-toggle.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/modern-business.css" />
   </head>
 
   <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">YOUSELECT</a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
     <!-- Page Content -->
     <div class="container">
-      <!-- Navigation -->
-      <nav
-        class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="index.html">YOUSELECT</a>
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">
+        iSelect Energy Compare
+      </h1>
 
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item bg-primary">
-                <a class="navbar-brand" href="index.html">Call Us 13 19 20</a>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Compare</li>
+      </ol>
+
+      <div id="filters" class="row clearfix">
+        <div class="col-lg-12 mb-12">
+          <div class="card h-200">
+            <h3 class="card-header">Refine Recommendations</h3>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="checkbox">
+                    <label class="checkbox-inline">
+                      Solar compatible
+                    </label>
+                    <input
+                      type="checkbox"
+                      data-toggle="toggle"
+                      data-on="Yes"
+                      data-off="No"
+                      data-onstyle="primary"
+                      data-offstyle="secondary"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="checkbox">
+                    <label class="checkbox-inline">
+                      Upload your e-bill for an accurate comparison in seconds.?
+                    </label>
+                    <input
+                      id="upload-toggle"
+                      type="checkbox"
+                      data-toggle="toggle"
+                      data-on="Yes"
+                      data-off="No"
+                      data-onstyle="primary"
+                      data-offstyle="secondary"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <br />
+              <!-- Upload bill -->
+              <div class="row d-none" id="upload-row">
+                <div class="col-lg-6">
+                  <div class="custom-file overflow-hidden rounded-pill mb-5">
+                    <input
+                      id="customFile"
+                      type="file"
+                      class="custom-file-input rounded-pill"
+                    />
+                    <label
+                      for="customFile"
+                      class="custom-file-label rounded-pill"
+                      >Choose bill file</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Usage Type -->
+              <div class="row" id="usage-type">
+                <div class="col-lg-12">
+                  Usage type:
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                      <input type="radio" name="options" id="option1" checked />
+                      Low
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options" id="option2" /> Medium
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options" id="option3" /> High
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-body-->
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <!-- Pricing Row -->
+      <div id="pricing" class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h3 class="card-header">
+              Rate Saver
+              <img
+                src="images/small/powerdirect_82x52.png"
+                class="float-right"
+              />
+            </h3>
+            <div class="card-body">
+              <div class="display-4">$19.99</div>
+              <div class="font-italic">per 91 days</div>
+              <div class="mt-3">
+                <a
+                  href="#"
+                  class="btn btn-warning"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">59.85 c/day daily supply charge</li>
+              <li class="list-group-item">13.10193 c/kWh general usage</li>
+              <li class="list-group-item">Solar compatible</li>
+              <li class="list-group-item">
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item">No exit fees</li>
+              <li class="list-group-item">
+                <a href="#" class="btn btn-primary">Apply Now!</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
-      <h1 class="my-4 text-center" id="titleheader">
-        Electricity Recommendation
-      </h1>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item col-centered">
-          <div class="card h-100">
-            <a href="#"
-              ><img
-                src="images/loading.gif"
-                alt=""
-                width="200px"
-                height="150px"
-                class="center-image"
-                id="logo"
-            /></a>
+        <div class="col-lg-4 mb-4">
+          <div class="card card-outline-primary h-100">
+            <h3 class="card-header bg-iselect text-white">
+              Origin Max Saver
+              <img src="images/small/Origin1_85x52.png" class="float-right" />
+            </h3>
             <div class="card-body">
-              <h4 class="card-title" id="product"></h4>
-              <p class="card-text" id="estimatedcost"></p>
-              <p class="card-text" id="estimatedcostelec"></p>
-              <p class="card-text" id="estimatedcostgas"></p>
+              <div class="display-4">$39.99</div>
+              <div class="font-italic">per 91 days</div>
+              <div class="mt-3">
+                <a
+                  href="#"
+                  class="btn btn-warning"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                  >View Details</a
+                >
+              </div>
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">89.85 c/day daily supply charge</li>
+              <li class="list-group-item">23.10193 c/kWh general usage</li>
+              <li class="list-group-item">Solar compatible</li>
+              <li class="list-group-item">
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item">Single Rate</li>
+              <li class="list-group-item">
+                <a href="#" class="btn btn-primary">Apply Now!</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h3 class="card-header">
+                ESSENTIALS SAVER <img src="images/small/agl_82x52.png" class="float-right" />
+            </h3>
+            <div class="card-body">
+              <div class="display-4">$159.99</div>
+              <div class="font-italic">per 91 days</div>
+              <div class="mt-3">
+                <a
+                  href="#"
+                  class="btn btn-warning"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                105.1699 c/day daily supply charge
+              </li>
+              <li class="list-group-item">22.14993 c/kWh general usage</li>
+              <li class="list-group-item">Solar compatible</li>
+              <li class="list-group-item">
+                Single Rate
+              </li>
+              <li class="list-group-item">No exit fees</li>
+              <li class="list-group-item">
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                  >Apply Now!</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="row" id="viewdetailsbtn">
-        <div
-          class="col-md-4 col-centered"
-          data-toggle="modal"
-          data-target="#myModal"
-        >
-          <a class="btn btn-block btn-lg btn-light text-dark" href="#"
-            >About this Plan</a
-          >
-        </div>
-      </div>
-      <div class="row mb-4" hidden id="applybtn">
-        <div class="col-md-4 col-centered">
-          <a class="btn btn-lg btn-block btn-primary" href="Thirdpage.html"
-            >Apply Now</a
-          >
-        </div>
-      </div>
-      <div class="row mb-4" hidden id="callus">
-        <div class="col-md-4 col-centered">
-          <div class="text-center">
-            or <i class="fa fa-phone-volume"></i>Call Us 1800 1 542 1232
-          </div>
-        </div>
-      </div>
+      <!-- /.row -->
     </div>
-
-    <hr />
-
-    <div class="row mb-4">
-      <div class="form-group col-md-4 col-centered">
-        <label for="postcode">Post Code</label>
-        <input
-          type="text"
-          class="form-control"
-          id="postcode"
-          placeholder="Enter PostCode"
-        />
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item col-centered btn-group">
-        <button class="btn btn-lg btn-light" id="elecbtn">
-          <i class="fa fa-bolt"></i> Electricity</button
-        ><button class="btn btn-lg btn-light" id="gasbtn">
-          <i class="fa fa-fire"></i> Gas</button
-        ><button class="btn btn-lg btn-light" id="bundlebtn">
-          <i class="fa fa-bolt"></i>
-          <i class="fa fa-fire"></i> Elec & Gas
-        </button>
-      </div>
-    </div>
-    <br />
-    <div class="row mb-4">
-      <div class="col-md-4 col-centered">
-        <a class="btn btn-lg btn-primary btn-block" href="page2.html"
-          >Compare More Results</a
-        >
-      </div>
-    </div>
-    <br />
+    <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -549,105 +679,33 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/tooglebootstrap/bootstrap-toggle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <script>
-      $(document).ready(function() {
-        getLocation();
-
-        function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        }
-        function showPosition(position) {
-          $("#postcode").val(3000);
-          $("#titleheader").text("Victoria Electricity Recommendation");
-          $("#logo").attr("src", "images/Origin.png");
-          $("#product").text("Origin Max Saver");
-          $("#estimatedcost").text("Estimated Cost: $463/91 days");
-          $("#applybtn").attr("hidden", false);
-          $("#callus").attr("hidden", false);
-        }
-
-        function changeTitle(postcodeVal, vertical) {
-          let success = true;
-          if (postcodeVal >= 900 && postcodeVal <= 999) {
-            $("#titleheader").text("Northern Territory " + vertical);
-          } else if (
-            (postcodeVal >= 2000 && postcodeVal <= 2599) ||
-            (postcodeVal >= 2921 && postcodeVal <= 2999)
-          ) {
-            $("#titleheader").text("New South Wales " + vertical);
-          } else if (postcodeVal >= 2600 && postcodeVal <= 2618) {
-            $("#titleheader").text("Australian Capital Territory " + vertical);
-          } else if (postcodeVal >= 3000 && postcodeVal <= 3999) {
-            $("#titleheader").text("Victoria " + vertical);
-          } else if (postcodeVal >= 4000 && postcodeVal <= 4999) {
-            $("#titleheader").text("Queensland " + vertical);
-          } else if (postcodeVal >= 5000 && postcodeVal <= 5999) {
-            $("#titleheader").text("South Australia " + vertical);
-          } else if (postcodeVal >= 6000 && postcodeVal <= 6999) {
-            $("#titleheader").text("Western Australia " + vertical);
-          } else if (postcodeVal >= 7000 && postcodeVal <= 7999) {
-            $("#titleheader").text("Tasmania " + vertical);
-          } else {
-            $("#titleheader").text(vertical);
-            success = false;
-          }
-          return success;
-        }
-
-        $("#elecbtn").click(function() {
-          const postcodeVal = parseInt($("#postcode").val());
-          if (changeTitle(postcodeVal, "Electricity Recommendation")) {
-            $("#logo").attr("src", "images/Origin.png");
-            $("#product").text("Origin Max Saver");
-            $("#estimatedcost").text("Estimated Cost: $463/91 days");
-            $("#estimatedcostelec").text("");
-            $("#estimatedcostgas").text("");
-            $("#applybtn").attr("hidden", false);
-            $("#callus").attr("hidden", false);
-          } else {
-            alert("Enter Valid Post Code");
-          }
+      $(function() {
+        $("#upload-toggle").change(function() {
+          $("#upload-row").toggleClass("d-none");
         });
-        $("#gasbtn").click(function() {
-          const postcodeVal = parseInt($("#postcode").val());
-          if (changeTitle(postcodeVal, "Gas Recommendation")) {
-            $("#logo").attr("src", "images/Momentum.png");
-            $("#product").text("Gas");
-            $("#estimatedcost").text("Estimated Cost: $139/61 days");
-            $("#estimatedcostelec").text("");
-            $("#estimatedcostgas").text("");
-            $("#applybtn").attr("hidden", false);
-            $("#callus").attr("hidden", false);
-          } else {
-            alert("Enter Valid Post Code");
-          }
-        });
-        $("#bundlebtn").click(function() {
-          const postcodeVal = parseInt($("#postcode").val());
-          if (
-            changeTitle(
-              postcodeVal,
-              "Electricity and Gas Bundle Recommendation"
-            )
-          ) {
-            $("#logo").attr("src", "images/AGL.png");
-            $("#product").text("ESSENTIAL SAVER");
-            $("#estimatedcost").text("Estimated Cost: ");
-            $("#estimatedcostelec").text("ELEC $340/91 days");
-            $("#estimatedcostgas").text("GAS $124/61 days");
-            $("#applybtn").attr("hidden", false);
-            $("#callus").attr("hidden", false);
-          } else {
-            alert("Enter Valid Post Code");
-          }
+
+        $("#customFile").change(function() {
+          $("#usage-type #option3")
+            .parent()
+            .addClass("active");
+          $("#usage-type #option1")
+            .parent()
+            .removeClass("active");
+
+          $("#pricing").html(
+            '<img class="center-img" width="200" height="200" src="images/loading.gif" style="margin:20 auto;" />'
+          );
+
+          // Change recommendations after 1 sec
+          setTimeout(function() {
+            $("#pricing").load("reco/reco-2.html");
+          }, 1500);
         });
       });
     </script>
