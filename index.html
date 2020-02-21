@@ -559,7 +559,11 @@
 
         function getLocation() {
           if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
+            try {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } catch(err) {
+                showPosition(true);
+            }
           } else {
             x.innerHTML = "Geolocation is not supported by this browser.";
           }
