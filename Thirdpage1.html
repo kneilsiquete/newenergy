@@ -23,11 +23,26 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+ 
 </head>
 <body>
     <!-- Outer wrapper-->
 <div class="container">
+    <nav
+        class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html">YOUSELECT</a>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item bg-primary">
+                <a class="navbar-brand" href="index.html">Call Us 13 19 20</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="row">
         <div>
             <h1>Apply now</h1>
@@ -38,7 +53,8 @@
                 <div class="modal fade" id="callUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <p style="text-align:left;">Your Quotation number is: <b>777681</b></p>
+                            <img src="images/Origin.png" alt="Logo" border="0" width="48">
+                            <p style="text-align:left;">Your Quotation number is: <b><font color="blue">777681</font></b></p>
                             <img src="images/dialing.gif" alt="Logo" border="0" width="100%">
                         </div>
                     </div>
@@ -52,32 +68,17 @@
         <div class="col-lg">
             <div class="card h-200">
             <div class="card-body">
-                <p class="card-text"><strong>You have selected:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="images/Origin.png" height="70px" width="75px" style="float:right" />
+                <p class="card-text"><strong>You have selected:</strong> <br /> Origin Max Saver VIC - Electricity</p>
             </div>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-lg">
-            <div class="card h-200">
-                <h4 class="card-header">FOR EXISTING CUSTOMERS ONLY:</h4>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <button type="button" class="btn btn-primary" id="existingCustombtn" onclick="hideCustomerInformation()">Existing Customer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="existingCustomer" style="margin-top:2%; display:none;">
+    <div id="existingCustomer" style="margin-top:2%;">
         <div class="row">
             <div class="col-lg">
                 <div class="card h-200">
-                    <h4 class="card-header">Existing Customer:</h4>
+                    <h4 class="card-header">FOR EXISTING CUSTOMERS ONLY:</h4>
                     <div class="card-body">
                         <div class="row">
                         <div class="col">
@@ -92,7 +93,6 @@
                     </div>
                     <div class="card-footer">
                         <div style="float:right;">
-                            <button type="button" class="btn btn-primary" onclick="showCustomerInformation()">cancel</button>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">confirm</button>
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -102,11 +102,11 @@
                                             One-Time Password
                                         </div>
                                         <div class="modal-body">
-                                            Enter one-time password sent to your email. <br />
+                                            Enter one-time password sent to your mobile number. <br />
                                             <input type="text" id="oneTimePassword"/>
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="page4.html" target="_self">OK</a>
+                                            <a href="#" target="_self" data-dismiss="modal" id="otpok">OK</a>
                                             <a href="" data-dismiss="modal">Cancel</a>
                                         </div>
                                     </div>
@@ -122,51 +122,57 @@
     <div class="row" style="margin-top:2%;">
         <div class="col-lg">
             <div class="card h-200">
-                <h4 class="card-header">For Faster Transaction: Upload ID</h4>
+                <h4 class="card-header">For Faster Transaction</h4>
                 <div class="card-body">
                     <div class="row">
                         <div class="col">  
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" placeholder="yeah1" id="customFile1">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupFileAddon01">Upload Identification</span>
+                                </div>
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    aria-describedby="inputGroupFileAddon01">
+                                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br />
+
+                    <div class="row">
+                        <div class="col">  
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupFileAddon02">Upload your current bill (Optional)</span>
+                                </div>
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile02"
+                                    aria-describedby="inputGroupFileAddon02" onclick="showBasicInformation();">
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="row" style="margin-top:2%;">
-        <div class="col-lg">
-            <div class="card h-200">
-                <h4 class="card-header">Upload your current bill (Optional)</h4>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">  
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" placeholder="yeah1" id="customFile1">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div>
-        Subscribe To ISelect Newsletter <br />
+        Subscribe To YouSelect Newsletter. <a href="#" >more info</a> <br />
         <input type="checkbox" id="subscribe" name="subscribe" value="Subscribe To ISelect Newsletter">
-            <label for="subscribe">Receive updates from ISelect and check for better products through your email</label>
+            <label for="subscribe">Receive energy recommendation via email when a better deal comes up</label>
         </checkbox>
     </div>
 
-    <form>
+    <form class="needs-validation" action="page4.html" novalidate>
     <div id="customerInformation"  style="margin-top:2%; "> 
         <div class="row">
             <div class="col-lg">
                 <div class="card h-200">
-                    <h4 class="card-header">Customer Information:</h4>
-                    <div class="card-body">
+                    <h4 class="card-header" data-toggle="collapse"  data-target="#collapseOne" id="customerinfopanel">Customer Information:</h4>
+                    <div class="card-body collapse hide" id="collapseOne">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div>
@@ -181,11 +187,11 @@
                                 </span>
                                 </div>
                                 <div>
-                                    <label for="fname">Firstname:</label><br>
+                                    <label for="fname" required>Firstname:</label><br>
                                     <span><input type="text" class="form-control" id="fname" name="fname" placeholder="Input First name"></span>
                                 </div>
                                 <div>
-                                    <label for="fname">Lastname:</label><br>
+                                    <label for="fname" required>Lastname:</label><br>
                                     <span><input type="text" class="form-control" id="lastname" name="lastname" placeholder="Input Last name"></span>
                                 </div>
                                 <div>
@@ -197,7 +203,7 @@
                                     <span><input type="text" class="form-control" id="otherNum" name="otherNum" placeholder="Input other number"></span>
                                 </div>
                                 <div>
-                                    <label for="fname">Email Address:</label><br>
+                                    <label for="fname" required>Email Address:</label><br>
                                     <span><input type="text" class="form-control" id="eadd" name="eadd" placeholder="Input Email Address"></span>
                                 </div>
                                 <div>
@@ -266,7 +272,7 @@
                     </div>
                     <div class="card-footer">
                         <div style="float:right;">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">confirm</button>
+                            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="save();">Submit</button>
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -303,6 +309,17 @@
         $("#existingCustomer").hide(500);
         $("#existingCustombtn").attr("disabled", false);
     }
+    function showBasicInformation(){
+        $("#fname").val("Shiro");
+        $("#lastname").val("Tomorrow");
+        $("#eadd").val("shiro.tomorrow@iselect.com.au");
+    }
+    $('#otpok').click(function(){
+        $('#customerinfopanel').click();
+        $("#fname").val("Shiro");
+        $("#lastname").val("Tomorrow");
+        $("#eadd").val("shiro.tomorrow@iselect.com.au");
+    });
 
     function save(){
 
