@@ -106,7 +106,7 @@
                                             <input type="text" id="oneTimePassword"/>
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="#" target="_self" data-dismiss="modal">OK</a>
+                                            <a href="#" target="_self" data-dismiss="modal" id="otpok">OK</a>
                                             <a href="" data-dismiss="modal">Cancel</a>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
         <div class="row">
             <div class="col-lg">
                 <div class="card h-200">
-                    <h4 class="card-header" data-toggle="collapse"  data-target="#collapseOne"><button type="button" class="btn btn-primary"><b>Customer Information:</b></button></h4>
+                    <h4 class="card-header" data-toggle="collapse"  data-target="#collapseOne" id="customerinfopanel">Customer Information:</h4>
                     <div class="card-body collapse hide" id="collapseOne">
                         <div class="row">
                             <div class="col-sm-6">
@@ -314,6 +314,12 @@
         $("#lastname").val("Tomorrow");
         $("#eadd").val("shiro.tomorrow@iselect.com.au");
     }
+    $('#otpok').click(function(){
+        $('#customerinfopanel').click();
+        $("#fname").val("Shiro");
+        $("#lastname").val("Tomorrow");
+        $("#eadd").val("shiro.tomorrow@iselect.com.au");
+    });
 
     function save(){
 
