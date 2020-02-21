@@ -126,9 +126,15 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">  
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" placeholder="yeah1" id="customFile1">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    aria-describedby="inputGroupFileAddon01">
+                                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -143,9 +149,15 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">  
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" placeholder="yeah1" id="customFile1">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    aria-describedby="inputGroupFileAddon01" onclick="showBasicInformation();">
+                                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -160,7 +172,7 @@
         </checkbox>
     </div>
 
-    <form>
+    <form class="needs-validation" action="page4.html" novalidate>
     <div id="customerInformation"  style="margin-top:2%; "> 
         <div class="row">
             <div class="col-lg">
@@ -266,7 +278,7 @@
                     </div>
                     <div class="card-footer">
                         <div style="float:right;">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                            <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="save();">Submit</button>
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -302,6 +314,11 @@
         $("#customerInformation").show(500);
         $("#existingCustomer").hide(500);
         $("#existingCustombtn").attr("disabled", false);
+    }
+    function showBasicInformation(){
+        $("#fname").val("Shiro");
+        $("#lastname").val("Tomorrow");
+        $("#eadd").val("shiro.tomorrow@iselect.com.au");
     }
 
     function save(){
